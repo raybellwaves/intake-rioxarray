@@ -76,4 +76,4 @@ class RioXarraySource(DataSourceMixin):
             # https://github.com/intake/filesystem_spec/issues/476#issuecomment-732372918
             url = fsspec.open(self.urlpath, **self.storage_options).open()
 
-        self._ds = xr.open_dataset(url, engine="rioxarray", **kwargs)
+        self._ds = xr.open_dataset(url, engine="rasterio", **kwargs)
